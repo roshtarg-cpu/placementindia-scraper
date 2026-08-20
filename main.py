@@ -202,3 +202,8 @@ def extract_job_data(job_element, base_url):
         Actor.log.warning(f'Error extracting job data: {str(e)}')
     
     return job_data
+
+
+if __name__ == '__main__':
+    import asyncio
+    asyncio.run(main())
