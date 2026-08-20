@@ -1,0 +1,39 @@
+{
+  "actorSpecification": 1,
+  "name": "placementindia-scraper",
+  "title": "PlacementIndia Job Scraper — India's Top Job Board Data",
+  "description": "Extract structured job listings from PlacementIndia.com — India's leading job portal connecting 1 Crore+ job seekers with 6 Lakh+ verified employers. Perfect for AI agents (Claude, ChatGPT, MCP), job aggregators, and recruitment analytics.",
+  "version": "1.0.0",
+  "meta": {
+    "templateId": "python-start"
+  },
+  "input": ".actor/input_schema.json",
+  "dockerfile": "./Dockerfile",
+  "readme": "./README.md",
+  "categories": ["JOBS"],
+  "storages": {
+    "dataset": {
+      "actorSpecification": 1,
+      "title": "PlacementIndia Jobs",
+      "views": {
+        "overview": {
+          "title": "Overview",
+          "transformation": {
+            "fields": [
+              "jobTitle",
+              "companyName",
+              "location",
+              "salary",
+              "experience",
+              "skills",
+              "postedDate"
+            ]
+          },
+          "display": {
+            "component": "table"
+          }
+        }
+      }
+    }
+  }
+}

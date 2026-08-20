@@ -1,0 +1,54 @@
+{
+  "title": "PlacementIndia Job Scraper Input",
+  "type": "object",
+  "schemaVersion": 1,
+  "properties": {
+    "searchKeyword": {
+      "title": "Search Keyword",
+      "type": "string",
+      "description": "Job title or skill to search (e.g., 'Python Developer', 'Data Analyst')",
+      "editor": "textfield",
+      "default": ""
+    },
+    "location": {
+      "title": "Location",
+      "type": "string",
+      "description": "City or state to filter jobs (e.g., 'Bangalore', 'Mumbai', 'Delhi')",
+      "editor": "textfield",
+      "default": "All India"
+    },
+    "maxJobs": {
+      "title": "Maximum Jobs",
+      "type": "integer",
+      "description": "Maximum number of jobs to scrape",
+      "editor": "number",
+      "default": 100,
+      "minimum": 1,
+      "maximum": 1000
+    },
+    "experienceLevel": {
+      "title": "Experience Level",
+      "type": "string",
+      "description": "Filter by experience level",
+      "editor": "select",
+      "enum": ["All", "Fresher", "1-3 years", "3-5 years", "5+ years"],
+      "default": "All"
+    },
+    "industry": {
+      "title": "Industry",
+      "type": "string",
+      "description": "Filter by industry sector",
+      "editor": "select",
+      "enum": ["All", "IT/Software", "Banking/Finance", "Healthcare", "Manufacturing", "Retail", "Education", "Other"],
+      "default": "All"
+    },
+    "jobType": {
+      "title": "Job Type",
+      "type": "string",
+      "description": "Filter by job type",
+      "editor": "select",
+      "enum": ["All", "Full-time", "Part-time", "Contract", "Internship", "Freelance"],
+      "default": "All"
+    }
+  }
+}
