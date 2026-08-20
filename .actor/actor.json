@@ -4,9 +4,83 @@
   "title": "PlacementIndia Job Scraper — India Job Board Data for AI Agents",
   "description": "Extract structured job listings from PlacementIndia.com. Perfect for Claude AI, ChatGPT, MCP automation, job aggregators, and recruitment analytics.",
   "version": "0.1",
-  "input": "./INPUT_SCHEMA.json",
-  "storages": {
-    "dataset": "./OUTPUT_SCHEMA.json"
-  },
-  "dockerfile": "./Dockerfile"
+  "buildTag": "latest",
+  "dockerfile": "./Dockerfile",
+  "output": {
+    "actorOutputSchemaVersion": 1,
+    "properties": {
+      "jobTitle": {
+        "type": "string",
+        "title": "Job Title",
+        "description": "Job position title",
+        "template": "{{{jobTitle}}}"
+      },
+      "companyName": {
+        "type": "string",
+        "title": "Company Name",
+        "description": "Hiring company name",
+        "template": "{{{companyName}}}"
+      },
+      "location": {
+        "type": "string",
+        "title": "Location",
+        "description": "Job location",
+        "template": "{{{location}}}"
+      },
+      "salary": {
+        "type": "string",
+        "title": "Salary",
+        "description": "Salary range or amount",
+        "template": "{{{salary}}}"
+      },
+      "experience": {
+        "type": "string",
+        "title": "Experience",
+        "description": "Required experience level",
+        "template": "{{{experience}}}"
+      },
+      "skills": {
+        "type": "string",
+        "title": "Skills",
+        "description": "Required skills (comma-separated)",
+        "template": "{{{skills}}}"
+      },
+      "jobDescription": {
+        "type": "string",
+        "title": "Job Description",
+        "description": "Full job description",
+        "template": "{{{jobDescription}}}"
+      },
+      "jobUrl": {
+        "type": "string",
+        "title": "Job URL",
+        "description": "Direct link to job posting",
+        "template": "{{{jobUrl}}}"
+      },
+      "postedDate": {
+        "type": "string",
+        "title": "Posted Date",
+        "description": "When the job was posted",
+        "template": "{{{postedDate}}}"
+      },
+      "applicants": {
+        "type": "string",
+        "title": "Applicants",
+        "description": "Number of applicants",
+        "template": "{{{applicants}}}"
+      },
+      "jobType": {
+        "type": "string",
+        "title": "Job Type",
+        "description": "Full-time, part-time, contract, etc.",
+        "template": "{{{jobType}}}"
+      },
+      "scrapedAt": {
+        "type": "string",
+        "title": "Scraped At",
+        "description": "Timestamp when data was scraped",
+        "template": "{{{scrapedAt}}}"
+      }
+    }
+  }
 }
