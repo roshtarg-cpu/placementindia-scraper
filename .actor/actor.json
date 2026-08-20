@@ -1,20 +1,9 @@
 {
   "actorSpecification": 1,
   "name": "placementindia-scraper",
-  "title": "PlacementIndia Job Scraper — India's Top Job Board Data",
-  "description": "Extract structured job listings from PlacementIndia.com — India's leading job portal. Perfect for AI agents (Claude, ChatGPT, MCP), job aggregators, and recruitment analytics.",
+  "title": "PlacementIndia Job Scraper — India Job Board Data for AI Agents",
+  "description": "Extract structured job listings from PlacementIndia.com. Perfect for Claude AI, ChatGPT, MCP automation, job aggregators, and recruitment analytics.",
   "version": "0.1",
-  "meta": {
-    "templateId": "python-start"
-  },
   "input": "./INPUT_SCHEMA.json",
-  "dockerfile": "./Dockerfile",
-  "readme": "./README.md",
-  "categories": ["JOBS"],
-  "storages": {
-    "dataset": {
-      "actorSpecification": 1,
-      "title": "PlacementIndia Jobs"
-    }
-  }
+  "dockerfile": "./Dockerfile"
 }
