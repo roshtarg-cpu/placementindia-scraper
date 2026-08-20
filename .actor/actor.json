@@ -6,21 +6,7 @@
   "version": "0.1",
   "input": "./INPUT_SCHEMA.json",
   "storages": {
-    "dataset": {
-      "actorSpecification": 1,
-      "fields": {},
-      "views": {
-        "overview": {
-          "title": "Overview",
-          "transformation": {
-            "fields": ["jobTitle", "companyName", "location", "salary", "skills"]
-          },
-          "display": {
-            "component": "table"
-          }
-        }
-      }
-    }
+    "dataset": "./OUTPUT_SCHEMA.json"
   },
   "dockerfile": "./Dockerfile"
 }
