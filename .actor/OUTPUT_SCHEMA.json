@@ -1,0 +1,65 @@
+{
+  "title": "PlacementIndia Job",
+  "type": "object",
+  "schemaVersion": 1,
+  "properties": {
+    "jobTitle": {
+      "title": "Job Title",
+      "type": "string",
+      "description": "The title of the job position"
+    },
+    "companyName": {
+      "title": "Company Name",
+      "type": "string",
+      "description": "Name of the hiring company"
+    },
+    "location": {
+      "title": "Location",
+      "type": "string",
+      "description": "Job location (city, state)"
+    },
+    "salary": {
+      "title": "Salary",
+      "type": "string",
+      "description": "Salary range if available"
+    },
+    "experience": {
+      "title": "Experience Required",
+      "type": "string",
+      "description": "Required years of experience"
+    },
+    "skills": {
+      "title": "Skills",
+      "type": "array",
+      "description": "List of required skills",
+      "items": {
+        "type": "string"
+      }
+    },
+    "jobDescription": {
+      "title": "Job Description",
+      "type": "string",
+      "description": "Full job description"
+    },
+    "jobUrl": {
+      "title": "Job URL",
+      "type": "string",
+      "description": "Direct link to the job posting"
+    },
+    "postedDate": {
+      "title": "Posted Date",
+      "type": "string",
+      "description": "When the job was posted"
+    },
+    "applicants": {
+      "title": "Applicants",
+      "type": "string",
+      "description": "Number of applicants"
+    },
+    "jobType": {
+      "title": "Job Type",
+      "type": "string",
+      "description": "Employment type (Full-time, Part-time, etc.)"
+    }
+  }
+}

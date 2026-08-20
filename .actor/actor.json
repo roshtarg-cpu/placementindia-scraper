@@ -5,5 +5,22 @@
   "description": "Extract structured job listings from PlacementIndia.com. Perfect for Claude AI, ChatGPT, MCP automation, job aggregators, and recruitment analytics.",
   "version": "0.1",
   "input": "./INPUT_SCHEMA.json",
+  "storages": {
+    "dataset": {
+      "actorSpecification": 1,
+      "fields": {},
+      "views": {
+        "overview": {
+          "title": "Overview",
+          "transformation": {
+            "fields": ["jobTitle", "companyName", "location", "salary", "skills"]
+          },
+          "display": {
+            "component": "table"
+          }
+        }
+      }
+    }
+  },
   "dockerfile": "./Dockerfile"
 }
