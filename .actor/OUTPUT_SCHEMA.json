@@ -1,17 +1,27 @@
 {
-  "title": "PlacementIndia Job",
-  "type": "object",
-  "properties": {
-    "jobTitle": {"title": "Job Title", "type": "string", "description": "The title of the job position"},
-    "companyName": {"title": "Company Name", "type": "string", "description": "Name of the hiring company"},
+  "actorSpecification": 1,
+  "fields": {
+    "jobTitle": {"title": "Job Title", "type": "string", "description": "Job position title"},
+    "companyName": {"title": "Company", "type": "string", "description": "Company name"},
     "location": {"title": "Location", "type": "string", "description": "Job location"},
     "salary": {"title": "Salary", "type": "string", "description": "Salary range"},
-    "experience": {"title": "Experience", "type": "string", "description": "Required experience"},
-    "skills": {"title": "Skills", "type": "array", "description": "Required skills", "items": {"type": "string"}},
-    "jobDescription": {"title": "Description", "type": "string", "description": "Job description"},
-    "jobUrl": {"title": "URL", "type": "string", "description": "Job URL"},
-    "postedDate": {"title": "Posted", "type": "string", "description": "Posted date"},
-    "applicants": {"title": "Applicants", "type": "string", "description": "Number of applicants"},
-    "jobType": {"title": "Type", "type": "string", "description": "Job type"}
+    "experience": {"title": "Experience", "type": "string", "description": "Experience required"},
+    "skills": {"title": "Skills", "type": "array", "description": "Skills", "items": {"type": "string"}},
+    "jobDescription": {"title": "Description", "type": "string"},
+    "jobUrl": {"title": "URL", "type": "string"},
+    "postedDate": {"title": "Posted", "type": "string"},
+    "applicants": {"title": "Applicants", "type": "string"},
+    "jobType": {"title": "Type", "type": "string"}
+  },
+  "views": {
+    "overview": {
+      "title": "Overview",
+      "transformation": {
+        "fields": ["jobTitle", "companyName", "location", "salary", "skills"]
+      },
+      "display": {
+        "component": "table"
+      }
+    }
   }
 }
